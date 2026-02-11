@@ -1,10 +1,9 @@
-#!/bin/sh
-# Script to create files 106-110.txt with content '1'
+#!/bin/bash
 
-for i in 106 107 108 109 110
-do
-  echo "1" > "${i}.txt"
-  echo "Created ${i}.txt"
+# Create files from 300 to 310 with content '1'
+for i in {300..310}; do
+    echo "1" > "${i}.txt"
 done
 
-echo "All files created successfully"
+echo "Files created: 300.txt through 310.txt"
+ls -la *.txt
