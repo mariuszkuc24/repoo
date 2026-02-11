@@ -1,13 +1,9 @@
 #!/bin/bash
 
-# Script to create files 31.txt through 40.txt with identical content
+# Script to create files 75.txt through 80.txt with content '1'
 
-# Define the content to put in each file
-CONTENT="This is file number 31 through 40 with identical content."
-
-# Create files 31.txt to 40.txt
-for i in {31..40}; do
-    echo "$CONTENT" > "${i}.txt"
+for i in {75..80}; do
+    echo "1" > "${i}.txt"
     echo "Created ${i}.txt"
 done
 
