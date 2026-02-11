@@ -1,10 +1,10 @@
-#!/bin/sh
-# Script to create files 106-110.txt with content '1'
+#!/bin/bash
 
-for i in 106 107 108 109 110
-do
-  echo "1" > "${i}.txt"
-  echo "Created ${i}.txt"
+# Script to create files 206-210 with content '1'
+
+for i in {206..210}; do
+    echo "1" > "$i"
+    echo "Created file $i with content '1'"
 done
 
-echo "All files created successfully"
+echo "All files created successfully!"
