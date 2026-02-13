@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script to create files 511-516.txt with content from 500.txt
+# Script to create files 522.txt through 525.txt with content from 500.txt
 
 # Check if source file exists
 if [ ! -f "500.txt" ]; then
@@ -8,23 +8,10 @@ if [ ! -f "500.txt" ]; then
     exit 1
 fi
 
-# Read content from 500.txt
-content=$(cat 500.txt)
-
-# Create files 511.txt through 516.txt
-for i in {511..516}; do
-    filename="${i}.txt"
-    echo "$content" > "$filename"
-    echo "Created file: $filename"
-    
-    # Verify the file was created
-    if [ -f "$filename" ]; then
-        echo "  ✓ File created successfully"
-    else
-        echo "  ✗ Failed to create file: $filename"
-    fi
-
+# Create files 522.txt through 525.txt
+for i in {522..525}; do
+    cp 500.txt "${i}.txt"
+    echo "Created ${i}.txt"
 done
 
-echo "\nAll files created successfully!"
-echo "Files created: 511.txt, 512.txt, 513.txt, 514.txt, 515.txt, 516.txt"
+echo "Successfully created files 522.txt, 523.txt, 524.txt, and 525.txt"
