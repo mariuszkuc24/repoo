@@ -1,10 +1,12 @@
-#!/bin/sh
-# Script to create files 106-110.txt with content '1'
+#!/bin/bash
 
-for i in 106 107 108 109 110
-do
-  echo "1" > "${i}.txt"
-  echo "Created ${i}.txt"
+# Read content from 1.txt
+content=$(cat 1.txt)
+
+# Create files 500.txt through 505.txt
+for i in {500..505}; do
+    echo "$content" > "$i.txt"
+    echo "Created $i.txt"
 done
 
-echo "All files created successfully"
+echo "All files created successfully!"
